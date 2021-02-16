@@ -1,0 +1,39 @@
+.tutorial {
+  background: linear-gradient(180deg, rgba(116, 177, 174, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.header {
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding: 16px 0;
+}
+
+.headerClose {
+  margin-right: auto;
+}
+
+.headerClose > span {
+  display: flex;
+}
+
+.headerTitle {
+  color: #1D2952;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.headerStepCounter {
+  background-color: rgba(78, 94, 148, 0.1);
+  border-radius: 23px;
+  box-sizing: border-box;
+  color: #838BA5;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: auto;
+  padding: 5px 16px;
+}
