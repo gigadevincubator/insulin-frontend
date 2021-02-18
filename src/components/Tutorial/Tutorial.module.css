@@ -1,6 +1,8 @@
 .tutorial {
   background: linear-gradient(180deg, rgba(116, 177, 174, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   padding: 0 20px;
 }
@@ -33,7 +35,13 @@
   box-sizing: border-box;
   color: #838BA5;
   font-size: 14px;
+  font-variant-numeric: tabular-nums;
   font-weight: 500;
   margin-left: auto;
   padding: 5px 16px;
+}
+
+.navigation {
+  margin-top: auto;
+  margin-bottom: 32px;
 }
