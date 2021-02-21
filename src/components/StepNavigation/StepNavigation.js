@@ -1,17 +1,17 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import {
   decrementStep,
   incrementStep,
   selectActiveTutorial,
   selectActiveStepNumber,
-} from "components/Tutorial/tutorialsSlice";
+} from 'components/Tutorial/tutorialsSlice';
 
-import arrowLeft from "assets/arrow-left-green.svg";
-import arrowRight from "assets/arrow-right-white.svg";
-import styles from "./StepNavigation.module.css";
+import arrowLeft from 'assets/arrow-left-green.svg';
+import arrowRight from 'assets/arrow-right-white.svg';
+import styles from './StepNavigation.module.css';
 
 const StepNavigation = () => {
   const dispatch = useDispatch();

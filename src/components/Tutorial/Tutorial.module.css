@@ -1,5 +1,10 @@
 .tutorial {
-  background: linear-gradient(180deg, rgba(116, 177, 174, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  background: linear-gradient(
+      180deg,
+      rgba(116, 177, 174, 0.25) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ffffff;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -24,7 +29,7 @@
 }
 
 .headerTitle {
-  color: #1D2952;
+  color: #1d2952;
   font-size: 16px;
   font-weight: 500;
 }
@@ -33,7 +38,7 @@
   background-color: rgba(78, 94, 148, 0.1);
   border-radius: 23px;
   box-sizing: border-box;
-  color: #838BA5;
+  color: #838ba5;
   font-size: 14px;
   font-variant-numeric: tabular-nums;
   font-weight: 500;

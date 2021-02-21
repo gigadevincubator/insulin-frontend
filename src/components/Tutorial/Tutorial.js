@@ -1,19 +1,19 @@
-import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useParams, withRouter } from "react-router-dom";
+import React, { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useLocation, useParams, withRouter } from 'react-router-dom';
 
-import Step from "components/Step";
-import StepNavigation from "components/StepNavigation";
+import Step from 'components/Step';
+import StepNavigation from 'components/StepNavigation';
 import {
   getTutorial,
   changeStepTo,
   selectActiveTutorial,
   selectActiveStepNumber,
   selectActiveStepIndex,
-} from "components/Tutorial/tutorialsSlice";
+} from 'components/Tutorial/tutorialsSlice';
 
-import close from "assets/close.svg";
-import styles from "./Tutorial.module.css";
+import close from 'assets/close.svg';
+import styles from './Tutorial.module.css';
 
 const Tutorial = () => {
   const dispatch = useDispatch();

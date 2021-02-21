@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Player from "components/Player";
+import Player from 'components/Player';
 
-import styles from "./Step.module.css";
+import styles from './Step.module.css';
 
 const Step = ({ title, description }) => {
   return (

@@ -1,17 +1,17 @@
 .videoWrapper {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .title {
-    color: #74B1AE;
-    font-size: 23px;
-    font-weight: 600;
-    margin-bottom: 8px;
+  color: #74b1ae;
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .description {
-    color: #6E6E85;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
+  color: #6e6e85;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
 }

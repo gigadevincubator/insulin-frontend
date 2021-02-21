@@ -1,19 +1,19 @@
-import axios from "axios";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { createBrowserHistory } from "history";
+import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createBrowserHistory } from 'history';
 
 // TODO remove after end-point is done
-import TutorialData from "./mockup";
+import TutorialData from './mockup';
 
 const history = createBrowserHistory();
 
 export const getTutorial = createAsyncThunk(
-  "tutorials/getTutorial",
+  'tutorials/getTutorial',
   async ({ id, stepNumber }) => {
     // return (await axios.get("https://jsonplaceholder.typicode.com/posts/1"))
     //   .data;
-    console.log("id", id);
-    console.log("stepNumber", stepNumber);
+    console.log('id', id);
+    console.log('stepNumber', stepNumber);
     return {
       activeTutorial: TutorialData,
       activeStepNumber: parseInt(stepNumber),
@@ -22,7 +22,7 @@ export const getTutorial = createAsyncThunk(
 );
 
 export const tutorialsSlice = createSlice({
-  name: "tutorials",
+  name: 'tutorials',
   initialState: {
     activeTutorial: null,
     activeStepNumber: undefined,
@@ -38,7 +38,7 @@ export const tutorialsSlice = createSlice({
     },
     incrementStep: (state) => {
       state.activeStepNumber += 1;
-      console.log("state.activeStepNumber", state.activeStepNumber);
+      console.log('state.activeStepNumber', state.activeStepNumber);
     },
     decrementStep: (state) => {
       state.activeStepNumber -= 1;
@@ -49,7 +49,7 @@ export const tutorialsSlice = createSlice({
   },
   extraReducers: {
     [getTutorial.pending]: (state) => {
-      state.status = "loading";
+      state.status = 'loading';
     },
     [getTutorial.fulfilled]: (
       state,
@@ -58,10 +58,10 @@ export const tutorialsSlice = createSlice({
       state.activeTutorial = activeTutorial;
       state.cache.push(activeTutorial);
       state.activeStepNumber = activeStepNumber;
-      state.status = "success";
+      state.status = 'success';
     },
     [getTutorial.rejected]: (state) => {
-      state.status = "failed";
+      state.status = 'failed';
     },
   },
 });
