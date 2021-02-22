@@ -1,0 +1,28 @@
+.searchbar {
+  font-family: 'Poppins', sans-serif;
+  width: 336px;
+  height: 46px;
+  padding: 12px 45px 11px 19px;
+  margin: 24px 0 32px 0;
+  font-size: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 36px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.searchbar::placeholder {
+  font-size: 15px;
+  color: #b4b4c6;
+}
+
+.searchIcon {
+  position: absolute;
+  color: #b4b4c6;
+  width: 12.75px;
+  height: 12.75px;
+  top: 194px;
+  left: 321.5px;
+  z-index: 10;
+}

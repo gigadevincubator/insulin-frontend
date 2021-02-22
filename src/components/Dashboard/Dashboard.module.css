@@ -1,0 +1,41 @@
+.dashboard {
+  background: linear-gradient(180deg, #e4f2f7 0%, rgba(255, 255, 255, 0) 100%),
+    #ffffff;
+  padding: 26px 20px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title > p {
+  font-size: 19px;
+  color: #1d2952;
+}
+
+.title > p > span {
+  font-weight: 600;
+}
+
+.greeting {
+  color: #9292a1;
+  font-size: 16px;
+}
+
+.question {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.tutorials > p {
+  font-size: 16px;
+  color: #9292a1;
+  margin-bottom: 16px;
+}

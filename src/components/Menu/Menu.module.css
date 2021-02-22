@@ -1,0 +1,67 @@
+.menu {
+  width: 335px;
+}
+
+.tutorial {
+  background: linear-gradient(
+    90deg,
+    #d0f6ff 0%,
+    rgba(255, 255, 255, 0) 106.07%
+  );
+  border-radius: 56.5px;
+  width: 100%;
+  height: 72px;
+  margin-bottom: 12px;
+}
+
+.tutorialCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 8px 8px;
+}
+
+.tutorialContainer {
+  display: flex;
+  align-items: center;
+}
+
+.tutorialImg {
+  width: 56px;
+  height: 56px;
+  margin-right: 19px;
+  border-radius: 50%;
+  background-size: cover !important;
+}
+
+.tutorialTitle {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.tutorialSteps {
+  font-size: 14px;
+}
+
+.tutorialArrowContainer {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.tutorialArrow {
+  width: 4.5px;
+  height: 9px;
+  font-style: normal;
+  color: #62bcd1;
+  display: inline-block;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  padding: 3px;
+  margin-right: 4px;
+  transform: rotate(-45deg);
+}
