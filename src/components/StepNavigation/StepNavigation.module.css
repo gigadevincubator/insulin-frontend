@@ -1,0 +1,41 @@
+.navigation {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightAlign {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+.buttonForward {
+  align-items: center;
+  background-color: #74b1ae;
+  border: none;
+  border-radius: 23px;
+  box-sizing: border-box;
+  color: #ffffff;
+  composes: button;
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 10px 16px;
+}
+
+.buttonForward > img {
+  margin-left: 5px;
+}
+
+.buttonBack {
+  composes: button;
+}
