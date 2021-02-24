@@ -1,0 +1,41 @@
+.burgerContainer {
+  width: 24px;
+  height: 11px;
+  cursor: pointer;
+  display: inline-block;
+  z-index: 10;
+}
+
+.burger {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  transition: all 250ms ease-out;
+}
+
+.burger:before,
+.burger:after {
+  content: '';
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  background: #1d2952;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+
+.burger:before {
+  transform: translateY(-4px);
+}
+
+.burger:after {
+  transform: translateY(4px);
+}
+
+.active.burger:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+  transform: translateY(0) rotate(-45deg);
+}
