@@ -33,12 +33,11 @@ export default function Menu() {
             >
               <div className={style.tutorialCard}>
                 <div className={style.tutorialContainer}>
-                  <div
-                    style={{
-                      background: `url(${value.thumbnail}) no-repeat center`,
-                    }}
+                  <img
+                    src={value.thumbnail}
+                    alt={value.title}
                     className={style.tutorialImg}
-                  ></div>
+                  />
                   <div className={style.tutorialTxt}>
                     <p className={style.tutorialTitle}>{value.title}</p>
                     <p
