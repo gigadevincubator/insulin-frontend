@@ -454,7 +454,7 @@ const quotes = [
   },
   {
     quote: 'Nothing is impossible, the word itself says, “I’m possible!”',
-    author: '–Audrey Hepburn',
+    author: 'Audrey Hepburn',
   },
   {
     quote: 'The only way to do great work is to love what you do.',
