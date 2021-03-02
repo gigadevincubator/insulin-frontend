@@ -9,6 +9,9 @@ import {
   selectActiveStepNumber,
 } from 'components/Tutorial/tutorialsSlice';
 
+import FeedbackModal from '../FeedbackModal/FeedbackModal';
+import useModal from '../FeedbackModal/useModal';
+
 import arrowLeft from 'assets/arrow-left-green.svg';
 import arrowRight from 'assets/arrow-right-white.svg';
 import styles from './StepNavigation.module.css';
@@ -18,6 +21,10 @@ const StepNavigation = () => {
 
   const activeTutorial = useSelector(selectActiveTutorial);
   const activeStepNumber = useSelector(selectActiveStepNumber);
+
+  const { isShowing, toggle } = useModal();
+
+  const nodeRef = React.useRef(null);
 
   return (
     <nav className={styles.navigation}>
@@ -32,7 +39,10 @@ const StepNavigation = () => {
       )}
       <div className={styles.rightAlign}>
         {/* <button onClick={() => dispatch(incrementStep())}>Repeat</button> */}
-        {activeTutorial?.steps.length > activeStepNumber && (
+
+        {/* temporary change to ternary operator because 'Finish' button is missing on last step -Constantin */}
+
+        {activeTutorial?.steps.length > activeStepNumber ? (
           <Link
             className={styles.buttonForward}
             onClick={() => dispatch(incrementStep())}
@@ -43,7 +53,16 @@ const StepNavigation = () => {
             Continue
             <img src={arrowRight} alt="arrow right" />
           </Link>
+        ) : (
+          <Link
+            to={`/tutorials/${activeTutorial?.id}/steps/${activeStepNumber}`}
+            className={styles.buttonForward}
+            onClick={toggle}
+          >
+            Finish
+          </Link>
         )}
+        <FeedbackModal isShowing={isShowing} hide={toggle} />
       </div>
     </nav>
   );
