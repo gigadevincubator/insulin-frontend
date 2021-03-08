@@ -1,9 +1,10 @@
 .edit {
-  padding: 0 14px;
+  padding: 26px 14px 23px 14px;
+  height: 100vh;
 }
 
 .editHeader {
-  margin: 26px 0 17px 0;
+  margin-bottom: 17px;
 }
 
 .editHeader,
@@ -101,6 +102,11 @@ input:checked + .slider:before {
   background-color: #90f984;
 }
 
+.cardsContainer {
+  height: 240px;
+  overflow-y: scroll;
+}
+
 .stepsHeader {
   margin: 6px 5px 19px 5px;
   display: flex;
@@ -134,6 +140,7 @@ input:checked + .slider:before {
 }
 
 .newStepCard {
+  margin-top: 10px;
   background: #e5ffe2;
 }
 
@@ -163,4 +170,9 @@ input:checked + .slider:before {
   width: 18px !important;
   height: 23px !important;
   margin: 0 24px 0 auto;
+}
+
+.newStepLink {
+  text-decoration: none;
+  color: #000;
 }

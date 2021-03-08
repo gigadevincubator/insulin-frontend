@@ -13,7 +13,7 @@ export default function FileInput() {
 
   return (
     <div>
-      <label for="file-upload" className={style.fileInput}>
+      <label htmlFor="file-upload" className={style.fileInput}>
         {isSelected ? selectedFile.name : 'Choose a file...'}
       </label>
       <input
