@@ -3,12 +3,12 @@ input[type='file'] {
 }
 
 .fileInput {
-  width: 241px;
-  height: 48px;
+  width: 152px;
+  height: 30px;
   background: #f9f9f9;
   border: 1px solid #000;
-  border-radius: 36px;
-  padding: 7px 64px 8px 20px;
+  border-radius: 23px;
+  padding: 4px 40px 5px 13px;
   color: #93969e;
-  font-size: 22px;
+  font-size: 14px;
 }

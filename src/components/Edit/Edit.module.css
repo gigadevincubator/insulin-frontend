@@ -1,0 +1,166 @@
+.edit {
+  padding: 0 14px;
+}
+
+.editHeader {
+  margin: 26px 0 17px 0;
+}
+
+.editHeader,
+.tutEditor {
+  padding: 0 7px;
+}
+
+.tutEditor {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.title {
+  margin: 11px 0 4px 0;
+  font-size: 15px;
+  color: #58595e;
+}
+
+.titleInput {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  width: 332px;
+  height: 40px;
+  margin-bottom: 7px;
+  border-radius: 19px;
+  background: #f9f9f9;
+  padding: 10px 37px 9px 19px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.titleInput::placeholder {
+  font-size: 14px;
+  color: #93969e;
+}
+
+.thumbContainer {
+  padding: 0 5px;
+}
+
+.isPublishedTxt {
+  margin: 11px 0;
+  font-size: 15px;
+  color: #58595e;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 35px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f9f9f9;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 30px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #e5ffe2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(43px);
+  -ms-transform: translateX(43px);
+  transform: translateX(43px);
+  background-color: #90f984;
+}
+
+.stepsHeader {
+  margin: 6px 5px 19px 5px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.stepsHeader > p:nth-child(1) {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.stepsHeader > p:nth-child(2) {
+  color: #cecece;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.stepCard {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.stepCard,
+.newStepCard {
+  width: 346px;
+  height: 71px;
+  border-radius: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.newStepCard {
+  background: #e5ffe2;
+}
+
+.plusIcon {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 16px 0 18px;
+}
+
+.bars {
+  margin: 0px 13px 0px 16px;
+}
+
+.bar {
+  width: 23px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px 0;
+}
+
+.stepTitle {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.trashIcon {
+  width: 18px !important;
+  height: 23px !important;
+  margin: 0 24px 0 auto;
+}
