@@ -1,0 +1,14 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title > p {
+  font-size: 19px;
+  color: #1d2952;
+}
+
+.title > p > span {
+  font-weight: 600;
+}

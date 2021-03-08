@@ -4,18 +4,13 @@ import style from './Dashboard.module.css';
 
 import Searchbar from '../Searchbar/Searchbar';
 import Menu from '../Menu/Menu';
-import Navigation from '../Navigation/Navigation';
+import Header from '../Header/Header';
 
 export default function Dashboard() {
   return (
     <div className={style.dashboard}>
-      <div className={style.header}>
-        <div className={style.title}>
-          <p>
-            <span>med</span>tut
-          </p>
-          <Navigation />
-        </div>
+      <div className={style.dashboardHeader}>
+        <Header />
       </div>
       <div>
         <p className={style.greeting}>Good morning, NAME</p>
