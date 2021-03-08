@@ -1,0 +1,14 @@
+input[type='file'] {
+  display: none;
+}
+
+.fileInput {
+  width: 241px;
+  height: 48px;
+  background: #f9f9f9;
+  border: 1px solid #000;
+  border-radius: 36px;
+  padding: 7px 64px 8px 20px;
+  color: #93969e;
+  font-size: 22px;
+}
