@@ -89,36 +89,46 @@ export default function Edit() {
           <p className={style.steps}>Steps</p>
           <p className={style.amountOfSteps}>{steps.length} Steps</p>
         </div>
-        <Droppable droppableId={steps.length}>
-          {(provided) => (
-            <div
-              className={style.cardsContainer}
-              innerRef={provided.innerRef}
-              {...provided.droppableProps}
-            >
-              {steps.map((step, i) => {
-                return (
-                  <DragDropContext onDragEnd={this.onDragEnd}>
-                    <div className={style.stepCard} key={i}>
-                      <div className={style.bars}>
-                        <div className={style.bar}></div>
-                        <div className={style.bar}></div>
-                        <div className={style.bar}></div>
-                      </div>
-                      <p className={style.stepTitle}>{step}</p>
-                      <FontAwesomeIcon
-                        icon={faTrash}
-                        className={style.trashIcon}
-                        onClick={() => triggerDelete(i)}
-                      />
-                      {provided.placeholder}
-                    </div>
-                  </DragDropContext>
-                );
-              })}
-            </div>
-          )}
-        </Droppable>
+        <DragDropContext onDragEnd={onDragEnd}>
+          <Droppable droppableId={steps.length}>
+            {(provided) => (
+              <div
+                className={style.cardsContainer}
+                innerRef={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                {steps.map((step, i) => {
+                  return (
+                    <Draggable draggableId={i} index={i}>
+                      {(provided) => (
+                        <div
+                          className={style.stepCard}
+                          key={i}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          innerRef={provided.innerRef}
+                        >
+                          <div className={style.bars}>
+                            <div className={style.bar}></div>
+                            <div className={style.bar}></div>
+                            <div className={style.bar}></div>
+                          </div>
+                          <p className={style.stepTitle}>{step}</p>
+                          <FontAwesomeIcon
+                            icon={faTrash}
+                            className={style.trashIcon}
+                            onClick={() => triggerDelete(i)}
+                          />
+                          {provided.placeholder}
+                        </div>
+                      )}
+                    </Draggable>
+                  );
+                })}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
         <Link
           to={`create-tutorial/steps/${steps.length + 1}`}
           className={style.newStepLink}
