@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -45,6 +47,10 @@ export default function Edit() {
   const triggerDelete = (i) =>
     setSteps([...steps.slice(0, i), ...steps.slice(i + 1)]);
 
+  const onDragEnd = (result) => {
+    // TO-DO
+  };
+
   return (
     <div className={style.edit}>
       <div className={style.editHeader}>
@@ -83,25 +89,36 @@ export default function Edit() {
           <p className={style.steps}>Steps</p>
           <p className={style.amountOfSteps}>{steps.length} Steps</p>
         </div>
-        <div className={style.cardsContainer}>
-          {steps.map((step, i) => {
-            return (
-              <div className={style.stepCard} key={i}>
-                <div className={style.bars}>
-                  <div className={style.bar}></div>
-                  <div className={style.bar}></div>
-                  <div className={style.bar}></div>
-                </div>
-                <p className={style.stepTitle}>{step}</p>
-                <FontAwesomeIcon
-                  icon={faTrash}
-                  className={style.trashIcon}
-                  onClick={() => triggerDelete(i)}
-                />
-              </div>
-            );
-          })}
-        </div>
+        <Droppable droppableId={steps.length}>
+          {(provided) => (
+            <div
+              className={style.cardsContainer}
+              innerRef={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {steps.map((step, i) => {
+                return (
+                  <DragDropContext onDragEnd={this.onDragEnd}>
+                    <div className={style.stepCard} key={i}>
+                      <div className={style.bars}>
+                        <div className={style.bar}></div>
+                        <div className={style.bar}></div>
+                        <div className={style.bar}></div>
+                      </div>
+                      <p className={style.stepTitle}>{step}</p>
+                      <FontAwesomeIcon
+                        icon={faTrash}
+                        className={style.trashIcon}
+                        onClick={() => triggerDelete(i)}
+                      />
+                      {provided.placeholder}
+                    </div>
+                  </DragDropContext>
+                );
+              })}
+            </div>
+          )}
+        </Droppable>
         <Link
           to={`create-tutorial/steps/${steps.length + 1}`}
           className={style.newStepLink}
