@@ -48,7 +48,24 @@ export default function Edit() {
     setSteps([...steps.slice(0, i), ...steps.slice(i + 1)]);
 
   const onDragEnd = (result) => {
-    // TO-DO
+    const { destination, source, draggableId } = result;
+
+    if (!destination) return;
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    )
+      return;
+
+    const newStepList = Array.from(steps);
+    newStepList.splice(source.index, 1);
+    newStepList.splice(
+      destination.index,
+      0,
+      steps[draggableId.replace('step-', '')]
+    );
+    setSteps(newStepList);
   };
 
   return (
@@ -90,23 +107,24 @@ export default function Edit() {
           <p className={style.amountOfSteps}>{steps.length} Steps</p>
         </div>
         <DragDropContext onDragEnd={onDragEnd}>
-          <Droppable droppableId={'DP-' + steps.length}>
+          <Droppable droppableId={'DP-1'}>
             {(provided) => (
               <div
                 className={style.cardsContainer}
-                innerRef={provided.innerRef}
                 {...provided.droppableProps}
+                ref={provided.innerRef}
+                key={'steps'}
               >
                 {steps.map((step, i) => {
                   return (
-                    <Draggable draggableId={'DG-' + i} index={i}>
+                    <Draggable draggableId={'step-' + i} index={i} key={i}>
                       {(provided) => (
                         <div
                           className={style.stepCard}
                           key={i}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          innerRef={provided.innerRef}
+                          ref={provided.innerRef}
                         >
                           <div className={style.bars}>
                             <div className={style.bar}></div>
@@ -119,12 +137,12 @@ export default function Edit() {
                             className={style.trashIcon}
                             onClick={() => triggerDelete(i)}
                           />
-                          {provided.placeholder}
                         </div>
                       )}
                     </Draggable>
                   );
                 })}
+                {provided.placeholder}
               </div>
             )}
           </Droppable>
