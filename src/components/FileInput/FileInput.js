@@ -14,12 +14,13 @@ export default function FileInput() {
   return (
     <div>
       <label htmlFor="file-upload" className={style.fileInput}>
-        {isSelected ? selectedFile.name : 'Choose a file...'}
+        {isSelected && selectedFile ? selectedFile.name : 'Choose a file...'}
       </label>
       <input
         type="file"
         name="file"
         id="file-upload"
+        accept=".png,.jpg,.jpeg"
         onChange={changeHandler}
       />
     </div>

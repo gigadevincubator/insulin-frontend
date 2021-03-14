@@ -90,7 +90,7 @@ export default function Edit() {
           <p className={style.amountOfSteps}>{steps.length} Steps</p>
         </div>
         <DragDropContext onDragEnd={onDragEnd}>
-          <Droppable droppableId={steps.length}>
+          <Droppable droppableId={'DP-' + steps.length}>
             {(provided) => (
               <div
                 className={style.cardsContainer}
@@ -99,7 +99,7 @@ export default function Edit() {
               >
                 {steps.map((step, i) => {
                   return (
-                    <Draggable draggableId={i} index={i}>
+                    <Draggable draggableId={'DG-' + i} index={i}>
                       {(provided) => (
                         <div
                           className={style.stepCard}
