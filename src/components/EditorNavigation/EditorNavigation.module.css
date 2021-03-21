@@ -13,22 +13,5 @@
   width: 23px;
   height: 23px;
   margin-left: 11px;
-}
-
-.finishBtn {
-  width: 101px;
-  height: 45px;
-  background: #000;
-  color: #fff;
-  border-radius: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-}
-
-.checkIcon {
-  margin-right: 8px;
-  width: 22px;
-  height: 17px;
+  margin-top: 7.5px;
 }

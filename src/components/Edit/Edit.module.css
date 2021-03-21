@@ -176,3 +176,21 @@ input:checked + .slider:before {
   text-decoration: none;
   color: #000;
 }
+
+.checkIcon {
+  margin-right: 8px;
+  width: 22px;
+  height: 17px;
+}
+
+.finishBtn {
+  width: 101px;
+  height: 45px;
+  background: #000;
+  color: #fff;
+  border-radius: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}

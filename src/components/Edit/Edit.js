@@ -5,6 +5,7 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../Header/Header';
 import FileInput from '../FileInput/FileInput';
@@ -157,7 +158,14 @@ export default function Edit() {
           </div>
         </Link>
       </div>
-      <EditorNavigation />
+      <EditorNavigation backTo={'/create-tutorial'}>
+        <Link to={'/'} style={{ textDecoration: 'none' }}>
+          <div className={style.finishBtn}>
+            <FontAwesomeIcon icon={faCheck} className={style.checkIcon} />
+            Save
+          </div>
+        </Link>
+      </EditorNavigation>
     </div>
   );
 }
