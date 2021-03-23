@@ -21,7 +21,6 @@ export default function CreateTutorial() {
   ]);
 
   const [title, setTitle] = useState('');
-
   const inputRef = useRef(null);
 
   const checkValues = (e) => {
