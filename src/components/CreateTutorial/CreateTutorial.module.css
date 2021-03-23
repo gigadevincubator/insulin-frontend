@@ -1,0 +1,90 @@
+.createTutorial {
+  padding: 26px 20px 28px 20px;
+  height: 100vh;
+}
+
+.createHeader {
+  margin-bottom: 17px;
+}
+
+.title {
+  margin-bottom: 19px;
+}
+
+.title > p {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.inputContainer {
+  margin-bottom: 19px;
+}
+
+.inputContainer > p,
+.languageContainer > p,
+.thumbnailContainer > p {
+  font-size: 15px;
+  color: #58595e;
+}
+
+.inputContainer > p,
+.languageContainer > p {
+  margin-bottom: 11px;
+}
+
+.titleInput {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  width: 332px;
+  height: 40px;
+  border-radius: 19px;
+  padding: 10px 37px 9px 19px;
+  background: #f9f9f9;
+  outline: none;
+  border: none;
+}
+
+.titleInput {
+  overflow: hidden;
+}
+
+.titleInput::placeholder {
+  font-size: 14px;
+  color: #93969e;
+}
+
+.languageContainer {
+  margin-bottom: 11px;
+}
+
+.default.is-selected {
+  display: none;
+}
+
+.thumbnailContainer > p {
+  margin-bottom: 6px;
+}
+
+.continueBtn {
+  width: 146px;
+  height: 45px;
+  background: #000;
+  color: #fff;
+  border-radius: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.arrowRight {
+  margin-left: 6px;
+  width: 19px;
+  height: 19px;
+}
+
+.ddIndicator {
+  color: #000;
+  width: 30px;
+  height: 30px;
+}
